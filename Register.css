@@ -1,0 +1,138 @@
+@import url(https:);
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:WhiteSmoke;
+}
+
+/* ===== MAIN LAYOUT ===== */
+.register-wrapper{
+    display:flex;
+    min-height:100vh;
+}
+
+/* ===== LEFT SIDE ===== */
+.register-left{
+    flex:1;
+    background:MediumSeaGreen;
+    color:white;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    padding:40px;
+    text-align:center;
+}
+
+.register-left h1{
+    font-size:2.6rem;
+    margin-bottom:15px;
+}
+
+.register-left p{
+    max-width:320px;
+    line-height:1.6;
+}
+
+/* ===== RIGHT SIDE ===== */
+.register-right{
+    flex:1;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    padding:40px;
+}
+
+/* ===== FORM CARD ===== */
+.register-card{
+    width:100%;
+    max-width:380px;
+
+    background:white;
+    padding:35px;
+
+    border-radius:12px;
+    box-shadow:0 5px 20px LightGray;
+}
+
+.register-card h2{
+    text-align:center;
+    margin-bottom:20px;
+    color:DarkSlateGray;
+}
+
+/* ===== INPUT FIELDS ===== */
+.register-card form{
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+}
+
+.register-card input{
+    padding:12px;
+    border:1px solid LightGray;
+    border-radius:8px;
+    outline:none;
+}
+
+.register-card input:focus{
+    border:2px solid MediumSeaGreen;
+}
+
+/* ===== BUTTON ===== */
+.register-card button{
+    padding:12px;
+    background:MediumSeaGreen;
+    color:white;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+    font-weight:600;
+}
+
+/* ===== TEXT BELOW ===== */
+.register-card p{
+    margin-top:15px;
+    text-align:center;
+    font-size:0.9rem;
+}
+
+.register-card a{
+    color:RoyalBlue;
+    text-decoration:none;
+    font-weight:500;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 768px){
+
+    .register-wrapper{
+        flex-direction:column;
+    }
+
+    .register-left{
+        padding:30px;
+    }
+
+    .register-left h1{
+        font-size:2rem;
+    }
+
+    .register-right{
+        padding:30px;
+    }
+
+    .register-card{
+        box-shadow:none;
+        border:1px solid LightGray;
+    }
+}
