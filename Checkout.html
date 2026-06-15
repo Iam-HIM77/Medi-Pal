@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediPal | Checkout</title>
+    <link rel="stylesheet" href="Checkout.css">
+    <link rel="icon" href="C:\Users\King Theo\Downloads\logo.png" type="image/png">
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="logo">
+        <img class="medipal-logo" src="C:\Users\King Theo\Downloads\logo.png" 
+        alt="MediPal Logo">MediPal
+    </div>
+    <ul class="nav-links">
+        <li><a href="Index.html">Home</a></li>
+        <li><a href="Medicines.html">Medicines</a></li>
+        <li><a href="About.html">About</a></li>
+        <li><a href="Contact.html">Contact</a></li>
+        <li><a href="Login.html">Login</a></li>
+        <li><a href="Register.html">Register</a></li>
+    </ul>
+    <div class="cart-icon">
+        <img src="C:\Users\King Theo\Downloads\cart.png" alt="Cart">
+        <span class="cart-count" id="cartCount">0</span>
+    </div>
+</nav>
+
+<section class="checkout-section">
+    <div class="checkout-container">
+        <h1>Checkout</h1>
+        
+        <div class="checkout-wrapper">
+            <div class="delivery-form">
+                <h2>Delivery Information</h2>
+                <form id="checkoutForm">
+                    <input type="text" id="fullName" placeholder="Full Name" required>
+                    <input type="email" id="email" placeholder="Email Address" required>
+                    <input type="tel" id="phone" placeholder="Phone Number" required>
+                    <textarea id="address" rows="3" placeholder="Delivery Address" required></textarea>
+                    <input type="text" id="city" placeholder="City" required>
+                    
+                    <h2>Payment Method</h2>
+                    <div class="payment-options">
+                        <label class="payment-option">
+                            <input type="radio" name="payment" value="cash" checked> Cash on Delivery
+                        </label>
+                        <label class="payment-option">
+                            <input type="radio" name="payment" value="mobile"> Mobile Money
+                        </label>
+                        <label class="payment-option">
+                            <input type="radio" name="payment" value="card"> Credit/Debit Card
+                        </label>
+                    </div>
+                </form>
+            </div>
+            
+            <div class="order-summary">
+                <h2>Your Order</h2>
+                <div id="orderItems" class="order-items"></div>
+                <div class="summary-row">
+                    <span>Subtotal:</span>
+                    <span>GH₵<span id="summarySubtotal">0.00</span></span>
+                </div>
+                <div class="summary-row">
+                    <span>Delivery:</span>
+                    <span>GH₵5.00</span>
+                </div>
+                <div class="summary-row total">
+                    <span>Total:</span>
+                    <span>GH₵<span id="summaryTotal">0.00</span></span>
+                </div>
+                <button class="place-order-btn" id="placeOrderBtn">Place Order</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="footer">
+    <p>&copy; 2026 MediPal Online Pharmacy System</p>
+</footer>
+
+<script src="js/checkout.js"></script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediPal | All Medicines</title>
+    <link rel="icon" href="C:\Users\King Theo\Downloads\logo.png" type="image/png">
+    <link rel="stylesheet" href="Medicines.css">
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="logo">
+        <img class="medipal-logo" src="C:\Users\King Theo\Downloads\logo.png" 
+        alt="MediPal Logo"> MediPal
+    </div>
+    <ul class="nav-links">
+        <li><a href="Index.html">Home</a></li>
+        <li><a href="Medicines.html" class="active">Medicines</a></li>
+        <li><a href="About.html">About</a></li>
+        <li><a href="Contact.html">Contact</a></li>
+        <li><a href="Login.html">Login</a></li>
+        <li><a href="Register.html">Register</a></li>
+    </ul>
+    <div class="cart-icon">
+        <img src="C:\Users\King Theo\Downloads\cart.png" alt="Cart">
+        <span class="cart-count">0</span>
+    </div>
+</nav>
+
+<section class="page-header">
+    <h1>All Medicines</h1>
+    <p>Browse our complete collection of authentic medicines</p>
+</section>
+
+<section class="filters">
+    <div class="filter-container">
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="Search medicines...eg: paracetamol">
+            <button id="searchBtn">Search</button>
+        </div>
+        <div class="category-filters">
+            <button class="filter-btn active" data-category="all">All</button>
+            <button class="filter-btn" data-category="Pain Relief">Pain Relief</button>
+            <button class="filter-btn" data-category="Vitamins">Vitamins</button>
+            <button class="filter-btn" data-category="Antibiotics">Antibiotics</button>
+            <button class="filter-btn" data-category="Herbal">Herbal</button>
+            <button class="filter-btn" data-category="Antimalarial">Antimalarial</button>
+        </div>
+    </div>
+</section>
+
+<section class="medicines-list">
+    <div class="medicine-grid" id="medicinesGrid"></div>
+    <div id="noResults" class="no-results">
+        <p>No medicines found</p>
+    </div>
+</section>
+
+<footer class="footer">
+    <p>&copy; 2026 MediPal Online Pharmacy System</p>
+</footer>
+
+<script src="js/medicines.js"></script>
+</body>
+</html>

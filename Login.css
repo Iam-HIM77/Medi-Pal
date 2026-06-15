@@ -1,138 +1,126 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Poppins',sans-serif;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
-body{
-    background:WhiteSmoke;
+body {
+    background: #F5F5F5;
 }
 
-/* ===== MAIN LAYOUT ===== */
-.login-wrapper{
-    display:flex;
-    min-height:100vh;
+.login-wrapper {
+    display: flex;
+    min-height: 100vh;
 }
 
-/* ===== LEFT SIDE ===== */
-.login-left{
-    flex:1;
-    background:MediumSeaGreen;
-    color:white;
-
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-
-    padding:40px;
-    text-align:center;
+.login-logo {
+    width: 230px;
+    margin-bottom: 20px;
+    border-radius: 50%;
 }
 
-.login-left h1{
-    font-size:2.6rem;
-    margin-bottom:15px;
+.login-left {
+    flex: 1;
+    background: #4CAF50;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    text-align: center;
 }
 
-.login-left p{
-    max-width:320px;
-    line-height:1.6;
+.login-left h1 {
+    font-size: 2.6rem;
+    margin-bottom: 15px;
 }
 
-/* ===== RIGHT SIDE ===== */
-.login-right{
-    flex:1;
-
-    display:flex;
-    justify-content:center;
-    align-items:center;
-
-    padding:40px;
+.login-left p {
+    max-width: 320px;
+    line-height: 1.6;
 }
 
-/* ===== FORM CARD ===== */
-.login-card{
-    width:100%;
-    max-width:380px;
-
-    background:white;
-    padding:35px;
-
-    border-radius:12px;
-    box-shadow:0 5px 20px LightGray;
+.login-right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
 }
 
-.login-card h2{
-    text-align:center;
-    margin-bottom:20px;
-    color:DarkSlateGray;
+.login-card {
+    width: 100%;
+    max-width: 380px;
+    background: white;
+    padding: 35px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px #D3D3D3;
 }
 
-/* ===== FORM ===== */
-.login-card form{
-    display:flex;
-    flex-direction:column;
-    gap:12px;
+.login-card h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #2C3E50;
 }
 
-.login-card input{
-    padding:12px;
-    border:1px solid LightGray;
-    border-radius:8px;
-    outline:none;
+.login-card form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
 }
 
-.login-card input:focus{
-    border:2px solid MediumSeaGreen;
+.login-card input {
+    padding: 12px;
+    border: 1px solid #D3D3D3;
+    border-radius: 8px;
+    outline: none;
 }
 
-/* ===== BUTTON ===== */
-.login-card button{
-    padding:12px;
-    background:MediumSeaGreen;
-    color:white;
-    border:none;
-    border-radius:8px;
-    cursor:pointer;
-    font-weight:600;
+.login-card input:focus {
+    border: 2px solid #4CAF50;
 }
 
-/* ===== TEXT ===== */
-.login-card p{
-    margin-top:15px;
-    text-align:center;
-    font-size:0.9rem;
+.login-card button {
+    padding: 12px;
+    background: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
 }
 
-.login-card a{
-    color:RoyalBlue;
-    text-decoration:none;
-    font-weight:500;
+.login-card p {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 0.9rem;
 }
 
-/* ===== RESPONSIVE DESIGN ===== */
-@media (max-width: 768px){
+.login-card a {
+    color: #2E7D32;
+    text-decoration: none;
+    font-weight: 500;
+}
 
-    .login-wrapper{
-        flex-direction:column;
+@media (max-width: 768px) {
+    .login-wrapper {
+        flex-direction: column;
     }
-
-    .login-left{
-        padding:30px;
+    
+    .login-left {
+        padding: 30px;
     }
-
-    .login-left h1{
-        font-size:2rem;
+    
+    .login-left h1 {
+        font-size: 2rem;
     }
-
-    .login-right{
-        padding:30px;
-    }
-
-    .login-card{
-        box-shadow:none;
-        border:1px solid LightGray;
+    
+    .login-card {
+        box-shadow: none;
+        border: 1px solid #D3D3D3;
     }
 }

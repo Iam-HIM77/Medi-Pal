@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediPal | Track Order</title>
+    <link rel="stylesheet" href="Track.css">
+    <link rel="icon" href="C:\Users\King Theo\Downloads\logo.png" type="image/png">
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="logo">
+        <img class="medipal-logo" src="C:\Users\King Theo\Downloads\logo.png"
+         alt="MediPal Logo">MediPal
+    </div>
+    <ul class="nav-links">
+        <li><a href="Index.html">Home</a></li>
+        <li><a href="Medicines.html">Medicines</a></li>
+        <li><a href="About.html">About</a></li>
+        <li><a href="Contact.html">Contact</a></li>
+        <li><a href="Login.html">Login</a></li>
+        <li><a href="Register.html">Register</a></li>
+    </ul>
+    <div class="cart-icon">
+        <img src="C:\Users\King Theo\Downloads\cart.png" alt="Cart">
+        <span class="cart-count" id="cartCount">0</span>
+    </div>
+</nav>
+
+<section class="track-section">
+    <div class="track-container">
+        <h1>Track Your Order</h1>
+        
+        <div class="track-search">
+            <input type="text" id="orderId" placeholder="Enter Order ID">
+            <button id="trackBtn">Track Order</button>
+        </div>
+        
+        <div id="trackResult" class="track-result"></div>
+    </div>
+</section>
+
+<footer class="footer">
+    <p>&copy; 2026 MediPal Online Pharmacy System</p>
+</footer>
+
+<script src="js/track.js"></script>
+</body>
+</html>

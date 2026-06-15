@@ -1,138 +1,126 @@
-@import url(https:);
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Poppins',sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
-body{
-    background:WhiteSmoke;
+body {
+    background: #F5F5F5;
 }
 
-/* ===== MAIN LAYOUT ===== */
-.register-wrapper{
-    display:flex;
-    min-height:100vh;
+.register-logo {
+    width: 230px;
+    margin-bottom: 20px;
+    border-radius: 50%;
 }
 
-/* ===== LEFT SIDE ===== */
-.register-left{
-    flex:1;
-    background:MediumSeaGreen;
-    color:white;
-
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-
-    padding:40px;
-    text-align:center;
+.register-wrapper {
+    display: flex;
+    min-height: 100vh;
 }
 
-.register-left h1{
-    font-size:2.6rem;
-    margin-bottom:15px;
+.register-left {
+    flex: 1;
+    background: #4CAF50;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    text-align: center;
 }
 
-.register-left p{
-    max-width:320px;
-    line-height:1.6;
+.register-left h1 {
+    font-size: 2.6rem;
+    margin-bottom: 15px;
 }
 
-/* ===== RIGHT SIDE ===== */
-.register-right{
-    flex:1;
-
-    display:flex;
-    justify-content:center;
-    align-items:center;
-
-    padding:40px;
+.register-left p {
+    max-width: 320px;
+    line-height: 1.6;
 }
 
-/* ===== FORM CARD ===== */
-.register-card{
-    width:100%;
-    max-width:380px;
-
-    background:white;
-    padding:35px;
-
-    border-radius:12px;
-    box-shadow:0 5px 20px LightGray;
+.register-right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
 }
 
-.register-card h2{
-    text-align:center;
-    margin-bottom:20px;
-    color:DarkSlateGray;
+.register-card {
+    width: 100%;
+    max-width: 380px;
+    background: white;
+    padding: 35px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px #D3D3D3;
 }
 
-/* ===== INPUT FIELDS ===== */
-.register-card form{
-    display:flex;
-    flex-direction:column;
-    gap:12px;
+.register-card h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #2C3E50;
 }
 
-.register-card input{
-    padding:12px;
-    border:1px solid LightGray;
-    border-radius:8px;
-    outline:none;
+.register-card form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
 }
 
-.register-card input:focus{
-    border:2px solid MediumSeaGreen;
+.register-card input {
+    padding: 12px;
+    border: 1px solid #D3D3D3;
+    border-radius: 8px;
+    outline: none;
 }
 
-/* ===== BUTTON ===== */
-.register-card button{
-    padding:12px;
-    background:MediumSeaGreen;
-    color:white;
-    border:none;
-    border-radius:8px;
-    cursor:pointer;
-    font-weight:600;
+.register-card input:focus {
+    border: 2px solid #4CAF50;
 }
 
-/* ===== TEXT BELOW ===== */
-.register-card p{
-    margin-top:15px;
-    text-align:center;
-    font-size:0.9rem;
+.register-card button {
+    padding: 12px;
+    background: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
 }
 
-.register-card a{
-    color:RoyalBlue;
-    text-decoration:none;
-    font-weight:500;
+.register-card p {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 0.9rem;
 }
 
-/* ===== RESPONSIVE DESIGN ===== */
-@media (max-width: 768px){
+.register-card a {
+    color: #2E7D32;
+    text-decoration: none;
+    font-weight: 500;
+}
 
-    .register-wrapper{
-        flex-direction:column;
+@media (max-width: 768px) {
+    .register-wrapper {
+        flex-direction: column;
     }
-
-    .register-left{
-        padding:30px;
+    
+    .register-left {
+        padding: 30px;
     }
-
-    .register-left h1{
-        font-size:2rem;
+    
+    .register-left h1 {
+        font-size: 2rem;
     }
-
-    .register-right{
-        padding:30px;
-    }
-
-    .register-card{
-        box-shadow:none;
-        border:1px solid LightGray;
+    
+    .register-card {
+        box-shadow: none;
+        border: 1px solid #D3D3D3;
     }
 }
