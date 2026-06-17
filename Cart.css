@@ -12,6 +12,7 @@ body {
     color: #2C3E50;
 }
 
+
 /* ================= NAVBAR ================= */
 .navbar {
     display: flex;
@@ -55,6 +56,10 @@ body {
 }
 
 .nav-links a:hover {
+    color: #4CAF50;
+}
+
+.nav-links a.active {
     color: #4CAF50;
 }
 
@@ -249,6 +254,7 @@ body {
     padding: 25px;
     background: #2C3E50;
     color: white;
+    margin-top: 130px;
 }
 
 @media (max-width: 768px) {

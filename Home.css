@@ -85,7 +85,9 @@ body {
 .search-section {
     text-align: center;
     padding: 100px 20px 60px;
-    background: #F0FFF0;
+    background: #4CAF50;
+    margin-bottom: 30px;
+    color: white;
 }
 
 .search-section h1 {
@@ -94,7 +96,7 @@ body {
 }
 
 .search-section p {
-    color: #7F8C8D;
+    color: white;
     margin-bottom: 20px;
 }
 
