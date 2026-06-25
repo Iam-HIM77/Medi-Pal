@@ -4,27 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MediPal | Dashboard</title>
-    <link rel="stylesheet" href="Dashboard.css">
-    <link rel="icon" href="C:\Users\King Theo\Downloads\logo.png" type="image/png">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="icon" href="assets/images/logo.png" type="image/png">
 </head>
 <body>
 
 <nav class="navbar">
     <div class="logo">
-        <img class="medipal-logo" src="C:\Users\King Theo\Downloads\logo.png" 
-        alt="MediPal Logo">MediPal
+        <img class="medipal-logo" src="assets/images/logo.png" alt="MediPal Logo">MediPal
     </div>
-    <ul class="nav-links">
-        <li><a href="Home.html">Home</a></li>
-        <li><a href="Medicines.html">Medicines</a></li>
-        <!--<li><a href="About.html">About</a></li>
-        <li><a href="Contact.html">Contact</a></li>-->
-        <li><a href="Orders.html">My Orders</a></li>
-        <li><a href="Track.html">Track Order</a></li>
-        <li><a href="Dashboard.html" class="active">Dashboard</a></li>
-    </ul>
+       <ul class="nav-links" id="navLinks">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="medicines.html">Medicines</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="cart.html">Cart</a></li>
+            <li><a href="login.html" id="loginNav">Login</a></li>
+            <li><a href="register.html" id="registerNav">Register</a></li>
+        </ul>
     <div class="cart-icon">
-        <img src="C:\Users\King Theo\Downloads\cart.png" alt="Cart">
+        <img src="assets/images/cart.png" alt="Cart">
         <span class="cart-count" id="cartCount">0</span>
     </div>
 </nav>
@@ -38,54 +37,22 @@
                 <p id="userEmail">Not logged in</p>
             </div>
             <ul class="sidebar-menu">
-                <li class="menu-item active" data-tab="overview">Overview</li>
-                <li class="menu-item" data-tab="orders">My Orders</li>
-                <li class="menu-item" data-tab="profile">Profile Settings</li>
-                <li class="menu-item logout" id="logoutBtn">Logout</li>
+                <li class="menu-item active" data-tab="overview">📊 Overview</li>
+                <li class="menu-item" data-tab="orders">📦 My Orders</li>
+                <li class="menu-item" data-tab="profile">⚙️ Profile Settings</li>
             </ul>
         </div>
-        
         <div class="dashboard-content">
-            <!-- Overview Tab -->
             <div id="overviewTab" class="tab-content active">
                 <h2>Welcome back!</h2>
                 <div class="stats-grid">
-                    <div class="stat-card">
-                        <span class="stat-icon">📦</span>
-                        <div>
-                            <h3 id="totalOrders">0</h3>
-                            <p>Total Orders</p>
-                        </div>
-                    </div>
-                    <div class="stat-card">
-                        <span class="stat-icon">💰</span>
-                        <div>
-                            <h3 id="totalSpent">GH₵0</h3>
-                            <p>Total Spent</p>
-                        </div>
-                    </div>
-                    <div class="stat-card">
-                        <span class="stat-icon">🚚</span>
-                        <div>
-                            <h3 id="activeOrders">0</h3>
-                            <p>Active Orders</p>
-                        </div>
-                    </div>
+                    <div class="stat-card"><span class="stat-icon">📦</span><div><h3 id="totalOrders">0</h3><p>Total Orders</p></div></div>
+                    <div class="stat-card"><span class="stat-icon">💰</span><div><h3 id="totalSpent">GH₵0</h3><p>Total Spent</p></div></div>
+                    <div class="stat-card"><span class="stat-icon">🚚</span><div><h3 id="activeOrders">0</h3><p>Active Orders</p></div></div>
                 </div>
-                
-                <div class="recent-orders">
-                    <h3>Recent Orders</h3>
-                    <div id="recentOrders"></div>
-                </div>
+                <div class="recent-orders"><h3>Recent Orders</h3><div id="recentOrders"></div></div>
             </div>
-            
-            <!-- Orders Tab -->
-            <div id="ordersTab" class="tab-content">
-                <h2>My Orders</h2>
-                <div id="dashboardOrders"></div>
-            </div>
-            
-            <!-- Profile Tab -->
+            <div id="ordersTab" class="tab-content"><h2>My Orders</h2><div id="dashboardOrders"></div></div>
             <div id="profileTab" class="tab-content">
                 <h2>Profile Settings</h2>
                 <form class="profile-form" id="profileForm">
@@ -103,7 +70,7 @@
     <p>&copy; 2026 MediPal Online Pharmacy System</p>
 </footer>
 
-<script src="Main.js"></script>
-<script src="Dashboard.js"></script>
+<script src="js/main.js"></script>
+<script src="js/dashboard.js"></script>
 </body>
 </html>

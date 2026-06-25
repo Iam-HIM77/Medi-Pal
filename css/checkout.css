@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+* { margin:0; padding:0; box-sizing:border-box; font-family:'Poppins',sans-serif; }
+body { background:#F5F5F5; color:#2C3E50; }
+
+.navbar {
+    display:flex; justify-content:space-between; align-items:center;
+    padding:15px 8%; background:white; box-shadow:0 2px 10px #D3D3D3;
+    position:fixed; top:0; width:100%; z-index:1000;
+}
+.medipal-logo { width:30px; height:30px; margin-right:8px; vertical-align:middle; }
+.logo { font-size:24px; font-weight:600; color:#4CAF50; display:flex; align-items:center; }
+.nav-links { display:flex; list-style:none; gap:25px; }
+.nav-links a { text-decoration:none; color:#2C3E50; font-weight:500; transition:0.3s; }
+.nav-links a:hover { color:#4CAF50; }
+.cart-icon { position:relative; cursor:pointer; }
+.cart-icon img { width:30px; height:30px; }
+.cart-count { position:absolute; top:-8px; right:-10px; background:#F44336; color:white; border-radius:50%; padding:2px 6px; font-size:11px; font-weight:bold; }
+
+.checkout-section { padding:100px 8% 60px; }
+.checkout-container { max-width:1200px; margin:0 auto; }
+.checkout-container h1 { margin-bottom:30px; }
+.checkout-wrapper { display:grid; grid-template-columns:1fr 400px; gap:30px; }
+
+.delivery-form { background:white; padding:30px; border-radius:12px; box-shadow:0 2px 8px #D3D3D3; }
+.delivery-form h2 { margin:20px 0 15px; font-size:18px; }
+.delivery-form h2:first-child { margin-top:0; }
+.delivery-form input, .delivery-form textarea { width:100%; padding:12px; margin-bottom:15px; border:1px solid #D3D3D3; border-radius:8px; }
+.delivery-form input:focus, .delivery-form textarea:focus { outline:none; border-color:#4CAF50; }
+
+.payment-options { display:flex; flex-direction:column; gap:10px; margin-bottom:20px; }
+.payment-option { display:flex; align-items:center; gap:10px; padding:10px; border:1px solid #D3D3D3; border-radius:8px; cursor:pointer; }
+.payment-option input { width:auto; margin:0; }
+
+/* ===== MOBILE MONEY MERCHANT BOX ===== */
+.mobile-merchant-box { background: #FFF3E0; padding: 15px 18px; border-radius: 8px; margin-top: 15px; border-left: 4px solid #FF9800; }
+.merchant-title { font-weight: bold; color: #E65100; margin-bottom: 8px; font-size: 14px; }
+.merchant-number { font-size: 20px; font-weight: bold; color: #2C3E50; margin: 5px 0;}
+.merchant-label { font-size: 14px; color: #555; margin: 3px 0; }
+.merchant-amount { font-weight: bold; color: #4CAF50; font-size: 16px; }
+.merchant-instructions { font-size: 13px; color: #7F8C8D; margin-top: 8px; line-height: 1.5; }
+
+.order-summary { background:white; padding:25px; border-radius:12px; box-shadow:0 2px 8px #D3D3D3; height:fit-content; position:sticky; top:100px; }
+.order-summary h2 { margin-bottom:20px; font-size:18px; }
+.order-items { max-height:300px; overflow-y:auto; margin-bottom:20px; border-bottom:1px solid #F0F0F0; }
+.order-item { display:flex; justify-content:space-between; padding:10px 0; font-size:14px; }
+.summary-row { display:flex; justify-content:space-between; margin-bottom:12px; color:#7F8C8D; }
+.summary-row.total { font-size:18px; font-weight:bold; color:#4CAF50; border-top:1px solid #F0F0F0; padding-top:12px; margin-top:10px; }
+.place-order-btn { width:100%; padding:14px; background:#4CAF50; color:white; border:none; border-radius:8px; font-weight:600; cursor:pointer; transition:0.3s; margin-top:20px; }
+.place-order-btn:hover { background:#2E7D32; }
+
+.footer { text-align:center; padding:25px; background:#2C3E50; color:white; margin-top:40px; }
+
+@media (max-width:768px) {
+    .navbar { flex-direction:column; gap:10px; }
+    .nav-links { flex-wrap:wrap; justify-content:center; }
+    .checkout-wrapper { grid-template-columns:1fr; }
+    .order-summary { position:static; }
+}
+
+/* ===== PAYMENT DETAILS ===== */
+.payment-details { background: #F8F9FA; border-radius: 8px; padding: 15px; margin-top: 15px; border: 1px solid #E8E8E8;}
+
+.payment-details h3 { font-size: 16px; margin-bottom: 15px; color: #2C3E50;}
+
+.payment-details .form-group { margin-bottom: 12px;}
+
+.payment-details .form-group label {display: block; font-size: 13px;font-weight: 500;margin-bottom: 4px; color: #555;}
+
+.payment-details .form-group input,
+.payment-details .form-group select { width: 100%;padding: 10px 12px;border: 1px solid #D3D3D3;border-radius: 6px;font-size: 14px;}
+
+.payment-details .form-group input:focus,
+.payment-details .form-group select:focus { outline: none; border-color: #4CAF50; box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.2);
+}

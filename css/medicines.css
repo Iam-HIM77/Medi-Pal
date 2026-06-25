@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+* { margin:0; padding:0; box-sizing:border-box; font-family:'Poppins',sans-serif; }
+body { background:#F5F5F5; color:#2C3E50; }
+
+.navbar {
+    display:flex; justify-content:space-between; align-items:center;
+    padding:15px 8%; background:white; box-shadow:0 2px 10px #D3D3D3;
+    position:fixed; top:0; width:100%; z-index:1000;
+}
+.medipal-logo { width:30px; height:30px; margin-right:8px; vertical-align:middle; }
+.logo { font-size:24px; font-weight:600; color:#4CAF50; display:flex; align-items:center; }
+.nav-links { display:flex; list-style:none; gap:25px; }
+.nav-links a { text-decoration:none; color:#2C3E50; font-weight:500; transition:0.3s; }
+.nav-links a:hover, .nav-links a.active { color:#4CAF50; }
+.cart-icon { position:relative; cursor:pointer; }
+.cart-icon img { width:30px; height:30px; }
+.cart-count { position:absolute; top:-8px; right:-10px; background:#F44336; color:white; border-radius:50%; padding:2px 6px; font-size:11px; font-weight:bold; }
+
+.page-header { background:linear-gradient(135deg,#4CAF50,#2E7D32); padding:100px 20px 50px; text-align:center; color:white; }
+.page-header h1 { font-size:2.5rem; margin-bottom:10px; }
+
+.filters { padding:30px 8%; background:white; }
+.filter-container { max-width:1200px; margin:0 auto; }
+
+.search-box { display:flex; gap:10px; margin-bottom:20px; }
+.search-box input { flex:1; padding:12px; border:1px solid #D3D3D3; border-radius:8px; }
+.search-box button { padding:12px 25px; background:#4CAF50; border:none; color:white; border-radius:8px; cursor:pointer; }
+.category-filters { display:flex; flex-wrap:wrap; gap:10px; }
+
+.filter-btn { padding:8px 20px; background:#F5F5F5; border:1px solid #D3D3D3; border-radius:25px; cursor:pointer; transition:0.3s; }
+.filter-btn.active, .filter-btn:hover { background:#4CAF50; color:white; border-color:#4CAF50; }
+
+.medicines-list { padding:40px 8%; }
+.medicine-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:25px; }
+.medicine-card { background:#F8F9FA; border-radius:12px; overflow:hidden; transition:0.3s; box-shadow:0 5px 15px rgba(0,0,0,0.08); }
+.medicine-card:hover { transform:translateY(-5px); box-shadow:0 10px 25px rgba(0,0,0,0.15); }
+.medicine-card img { width:100%; height:220px; object-fit:cover; overflow: hidden;}
+.medicine-card p { padding:10px 15px 5px; font-size:14px; color:#7F8C8D; }
+.medicine-card span { display:block; padding:0 15px; font-weight:bold; color:#4CAF50; font-size:18px; }
+.add-to-cart { background:#4CAF50; color:white; border-radius:50px; width:90%; padding:10px; margin:10px 5% 15px; border:none; cursor:pointer; }
+.add-to-cart.disabled { background:#D3D3D3; cursor:not-allowed; }
+.no-results { display:none; text-align:center; padding:50px; background:white; border-radius:10px; }
+
+.footer { text-align:center; padding:25px; background:#2C3E50; color:white; margin-top:40px; }
+
+@media (max-width:768px) {
+    .navbar { flex-direction:column; gap:10px; }
+    .nav-links { flex-wrap:wrap; justify-content:center; }
+    .search-box { flex-direction:column; }
+    .medicine-grid { grid-template-columns:1fr; }
+}

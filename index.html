@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MediPal | Online Pharmacy</title>
+    <link rel="icon" href="assets/images/logo.png" type="image/png">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+
+    <!-- ===== NAVBAR ===== -->
+    <nav class="navbar">
+        <div class="logo">
+            <img class="medipal-logo" src="assets/images/logo.png" alt="MediPal Logo" />
+            MediPal
+        </div>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="medicines.html">Medicines</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="cart.html">Cart</a></li>
+            <li><a href="login.html" id="loginNav">Login</a></li>
+            <li><a href="register.html" id="registerNav">Register</a></li>
+        </ul>
+        <div class="cart-icon">
+            <img src="assets/images/cart.png" alt="Cart" />
+            <span class="cart-count" id="cartCount">0</span>
+        </div>
+    </nav>
+
+    <!-- ===== SEARCH SECTION ===== -->
+    <section class="search-section">
+        <h1>Find &amp; Order Medicines Online</h1>
+        <p>Search for trusted medicines and get them delivered to your doorstep.</p>
+    </section>
+    <div class="search-box">
+            <input type="text" id="homeSearchInput" placeholder="Search medicines e.g. Paracetamol" />
+            <button id="homeSearchBtn">Search</button>
+    </div>
+
+    <!-- ===== CATEGORIES ===== -->
+    <section class="categories">
+        <h2>Medicine Categories</h2>
+        <div class="category-grid">
+            <div class="card" data-category="Pain Relief">Pain Relief</div>
+            <div class="card" data-category="Vitamins">Vitamins</div>
+            <div class="card" data-category="Antibiotics">Antibiotics</div>
+            <div class="card" data-category="Antimalarial">Antimalarial</div>
+            <div class="card" data-category="Herbal">Herbal</div>
+            <div class="card" data-category="Digestive">Digestive</div>
+        </div>
+    </section>
+
+    <!-- ===== FEATURED MEDICINES (Dynamic, limited to 8) ===== -->
+    <section class="featured">
+        <h2>Featured Medicines</h2>
+        <div class="medicine-grid" id="homepageMedicines"></div>
+    </section>
+
+    <!-- ===== HOW IT WORKS ===== -->
+    <section class="steps">
+        <h2>How MediPal Works</h2>
+        <div class="step-grid">
+            <div class="step"><span>1</span><p>Search Medicine</p></div>
+            <div class="step"><span>2</span><p>Add to Cart</p></div>
+            <div class="step"><span>3</span><p>Place Order</p></div>
+            <div class="step"><span>4</span><p>Get Delivery</p></div>
+        </div>
+    </section>
+
+    <!-- ===== ABOUT PREVIEW ===== -->
+    <section class="about">
+        <h2>About MediPal</h2>
+        <p>MediPal is an online pharmacy system that allows users to search medicines, place orders, and receive fast delivery while pharmacies manage stock and orders efficiently.</p>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <p>&copy; 2026 MediPal Online Pharmacy System</p>
+    </footer>
+
+    <!-- ===== SCRIPTS ===== -->
+    <script src="js/main.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>

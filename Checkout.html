@@ -4,26 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MediPal | Checkout</title>
-    <link rel="stylesheet" href="Checkout.css">
-    <link rel="icon" href="C:\Users\King Theo\Downloads\logo.png" type="image/png">
+    <link rel="stylesheet" href="css/checkout.css">
+    <link rel="icon" href="assets/images/logo.png" type="image/png">
 </head>
 <body>
 
 <nav class="navbar">
     <div class="logo">
-        <img class="medipal-logo" src="C:\Users\King Theo\Downloads\logo.png" 
-        alt="MediPal Logo">MediPal
+        <img class="medipal-logo" src="assets/images/logo.png" alt="MediPal Logo">MediPal
     </div>
-    <ul class="nav-links">
-        <li><a href="Home.html">Home</a></li>
-        <li><a href="Medicines.html">Medicines</a></li>
-        <li><a href="About.html">About</a></li>
-        <li><a href="Contact.html">Contact</a></li>
-        <!--<li><a href="Login.html">Login</a></li>
-        <li><a href="Register.html">Register</a></li>-->
-    </ul>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="medicines.html">Medicines</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="cart.html">Cart</a></li>
+            <li><a href="login.html" id="loginNav">Login</a></li>
+            <li><a href="register.html" id="registerNav">Register</a></li>
+        </ul>
     <div class="cart-icon">
-        <img src="C:\Users\King Theo\Downloads\cart.png" alt="Cart">
+        <img src="assets/images/cart.png" alt="Cart">
         <span class="cart-count" id="cartCount">0</span>
     </div>
 </nav>
@@ -31,7 +31,6 @@
 <section class="checkout-section">
     <div class="checkout-container">
         <h1>Checkout</h1>
-        
         <div class="checkout-wrapper">
             <div class="delivery-form">
                 <h2>Delivery Information</h2>
@@ -54,24 +53,79 @@
                             <input type="radio" name="payment" value="card"> Credit/Debit Card
                         </label>
                     </div>
+
+                    <!-- Mobile Money -->
+                    <div id="mobileMoneyDetails" class="payment-details">
+                        <h3>Mobile Money Payment</h3>
+                        <div class="form-group">
+                            <label>Select Network</label>
+                            <select id="mobileNetwork">
+                                <option value="MTN">MTN Mobile Money</option>
+                                <option value="Telecel Cash">Telecel Cash</option>
+                                <option value="AirtelTigo">AirtelTigo Money</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Your Mobile Money Number</label>
+                            <input type="tel" id="mobileNumber" placeholder="e.g. 0241234567">
+                        </div>
+                        <div class="form-group">
+                            <label>Account Name</label>
+                            <input type="text" id="mobileName" placeholder="Name on mobile money account">
+                        </div>
+                       <div class="mobile-merchant-box">
+                            <p class="merchant-title">📱 Send payment to:</p>
+                            <p class="merchant-number">024 123 4567</p>
+                            <p class="merchant-label">Merchant: <strong>MediPal Pharmacy</strong></p>
+                            <p class="merchant-label">Amount: <span class="merchant-amount" id="mobileAmount">GH₵0.00</span></p>
+                            <p class="merchant-instructions">
+                                After sending payment, fill in your details above and click "Place Order". 
+                                We will confirm your payment and process your order.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Credit/Debit Card -->
+                    <div id="cardDetails" class="payment-details">
+                        <h3>Card Details</h3>
+                        <div class="form-group">
+                            <label>Card Number</label>
+                            <input type="text" id="cardNumber" placeholder="1234 5678 9012 3456" maxlength="19">
+                        </div>
+                        <div>
+                            <div class="form-group">
+                                <label>Expiry Date</label>
+                                <input type="text" id="cardExpiry" placeholder="MM/YY">
+                            </div>
+                            <div class="form-group">
+                                <label>CVV</label>
+                                <input type="text" id="cardCvv" placeholder="123" maxlength="4">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Cardholder Name</label>
+                            <input type="text" id="cardName" placeholder="Name on card">
+                        </div>
+                        <p>
+                            🔒 Your card information is encrypted and secure.
+                        </p>
+                    </div>
+
+                    <!-- Cash on Delivery -->
+                    <div id="cashDetails" class="payment-details">
+                        <p>
+                            ✅ Pay when your order arrives at your doorstep.
+                        </p>
+                    </div>
                 </form>
             </div>
             
             <div class="order-summary">
                 <h2>Your Order</h2>
                 <div id="orderItems" class="order-items"></div>
-                <div class="summary-row">
-                    <span>Subtotal:</span>
-                    <span>GH&#8373;<span id="summarySubtotal">0.00</span></span>
-                </div>
-                <div class="summary-row">
-                    <span>Delivery:</span>
-                    <span>GH&#8373;5.00</span>
-                </div>
-                <div class="summary-row total">
-                    <span>Total:</span>
-                    <span>GH&#8373;<span id="summaryTotal">0.00</span></span>
-                </div>
+                <div class="summary-row"><span>Subtotal:</span><span>GH₵<span id="summarySubtotal">0.00</span></span></div>
+                <div class="summary-row"><span>Delivery:</span><span>GH₵5.00</span></div>
+                <div class="summary-row total"><span>Total:</span><span>GH₵<span id="summaryTotal">0.00</span></span></div>
                 <button class="place-order-btn" id="placeOrderBtn">Place Order</button>
             </div>
         </div>
@@ -82,7 +136,7 @@
     <p>&copy; 2026 MediPal Online Pharmacy System</p>
 </footer>
 
-<script src="Main.js"></script>
-<script src="Checkout.js"></script>
+<script src="js/main.js"></script>
+<script src="js/checkout.js"></script>
 </body>
 </html>

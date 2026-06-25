@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediPal | Admin Dashboard</title>
+    <link rel="stylesheet" href="css/admin.css">
+    <link rel="icon" href="assets/images/logo.png" type="image/png">
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="logo">
+        <img class="medipal-logo" src="assets/images/logo.png" alt="MediPal Logo">
+        MediPal Admin
+    </div>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="medicines.html">Medicines</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="cart.html">Cart</a></li>
+            <li><a href="admin.html" class="active">Admin</a></li>
+            <li><a href="login.html" id="loginNav">Login</a></li>
+            <li><a href="register.html" id="registerNav">Register</a></li>
+        </ul>
+    <div class="cart-icon">
+        <img src="assets/images/cart.png" alt="Cart">
+        <span class="cart-count" id="cartCount">0</span>
+    </div>
+</nav>
+
+<section class="admin-section">
+    <div class="admin-container">
+        <div class="admin-sidebar">
+            <div class="admin-profile">
+                <div class="admin-avatar">👨‍💼</div>
+                <h3 id="adminName">Admin User</h3>
+                <p id="adminEmail">admin@medipal.com</p>
+            </div>
+            <ul class="sidebar-menu">
+                <li class="menu-item active" data-tab="overview">📊 Overview</li>
+                <li class="menu-item" data-tab="orders">📦 Orders</li>
+                <li class="menu-item" data-tab="products">💊 Products</li>
+                <li class="menu-item" data-tab="customers">👥 Customers</li>
+                <li class="menu-item" data-tab="messages">💬 Messages</li>
+                <li class="menu-item logout" data-tab="logout">🚪 Logout</li>
+            </ul>
+        </div>
+        <div class="admin-content">
+            <div id="overviewTab" class="tab-content active">
+                <h2>Admin Dashboard Overview</h2>
+                <div class="stats-grid">
+                    <div class="stat-card"><span class="stat-icon">📦</span><div><h3 id="totalOrders">0</h3><p>Total Orders</p></div></div>
+                    <div class="stat-card"><span class="stat-icon">💰</span><div><h3 id="totalRevenue">GH₵0</h3><p>Total Revenue</p></div></div>
+                    <div class="stat-card"><span class="stat-icon">👥</span><div><h3 id="totalCustomers">0</h3><p>Total Customers</p></div></div>
+                    <div class="stat-card"><span class="stat-icon">💊</span><div><h3 id="totalProducts">0</h3><p>Total Products</p></div></div>
+                </div>
+                <div class="admin-grid">
+                    <div class="admin-card"><h3>Recent Orders</h3><div id="adminRecentOrders"></div></div>
+                    <div class="admin-card"><h3>Low Stock Alert</h3><div id="lowStockAlert"></div></div>
+                </div>
+            </div>
+            <div id="ordersTab" class="tab-content">
+                <div class="tab-header"><h2>Manage Orders</h2><div class="order-filters">
+                    <button class="filter-btn active" data-status="all">All</button>
+                    <button class="filter-btn" data-status="pending">Pending</button>
+                    <button class="filter-btn" data-status="processing">Processing</button>
+                    <button class="filter-btn" data-status="shipped">Shipped</button>
+                    <button class="filter-btn" data-status="delivered">Delivered</button>
+                    <button class="filter-btn" data-status="cancelled">Cancelled</button>
+                </div></div>
+                <div id="adminOrdersList"></div>
+            </div>
+            <div id="productsTab" class="tab-content">
+                <div class="tab-header"><h2>Manage Products</h2>
+                    <button class="add-btn" id="addProductBtn">+ Add New Product</button></div>
+                <div class="product-search"><input type="text" id="productSearch" placeholder="Search products...">
+                    <button id="productSearchBtn">Search</button></div>
+                <div id="adminProductsList" class="admin-products-grid"></div>
+            </div>
+            <div id="customersTab" class="tab-content">
+                <h2>Manage Customers</h2>
+                <div id="adminCustomersList"></div></div>
+            <div id="messagesTab" class="tab-content">
+                <h2>Messages</h2>
+                <div id="adminMessagesList"></div>
+            </div>
+    </div>
+</section>
+
+<!-- Modals -->
+<div id="productModal" class="modal"><div class="modal-content">
+    <div class="modal-header"><h2 id="modalTitle">Add New Product</h2>
+        <span class="close-btn" id="closeProductModal">&times;</span>
+    </div>
+        <form id="productForm"><input type="hidden" id="editProductId">
+    <div class="form-group"><label>Product Name</label>
+        <input type="text" id="prodName" required>
+    </div>
+    <div class="form-group"><label>Description</label>
+        <input type="text" id="prodDescription" required>
+    </div>
+    <div class="form-group"><label>Price (GH₵)</label>
+        <input type="number" id="prodPrice" step="0.01" required>
+    </div>
+    <div class="form-group"><label>Category</label>
+        <select id="prodCategory" required>
+            <option value="Pain Relief">Pain Relief</option>
+            <option value="Vitamins">Vitamins</option>
+            <option value="Antibiotics">Antibiotics</option>
+            <option value="Herbal">Herbal</option>
+            <option value="Antimalarial">Antimalarial</option>
+            <option value="Digestive">Digestive</option>
+        </select>
+    </div>
+    <div class="form-group"><label>Stock Quantity</label>
+        <input type="number" id="prodStock" min="0" required>
+    </div>
+    <div class="form-group"><label>Image URL</label>
+        <input type="text" id="prodImage" placeholder="assets/medicines/default.jpg">
+        <button type="submit" class="submit-btn">Save Product</button></form>
+    </div>
+</div>
+
+<footer class="footer"><p>&copy; 2026 MediPal Online Pharmacy System | Admin Panel</p></footer>
+
+<script src="js/main.js"></script>
+<script src="js/admin.js"></script>
+</body>
+</html>

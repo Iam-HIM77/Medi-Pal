@@ -4,33 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MediPal | Register</title>
-    <link rel="stylesheet" href="Register.css">
-    <link rel="icon" href="C:\Users\King Theo\Downloads\logo.png" type="image/png">
+    <link rel="stylesheet" href="css/register.css">
+    <link rel="icon" href="assets/images/logo.png" type="image/png">
 </head>
 <body>
-
 <div class="register-wrapper">
     <div class="register-left">
-        <img src="C:\Users\King Theo\Downloads\logo.png" alt="MediPal Logo" class="register-logo">
+        <img src="assets/images/logo.png" alt="MediPal Logo" class="register-logo">
         <h1>MediPal</h1>
-        <p>Create an account to order medicines online, 
-            track your orders, and get fast delivery from trusted pharmacies.</p>
+        <p>Create an account to order medicines online, track your orders, and get fast delivery from trusted pharmacies.</p>
     </div>
     <div class="register-right">
         <div class="register-card">
             <h2>Create Account</h2>
-            <form>
-                <input type="text" placeholder="Full Name" required>
-                <input type="email" placeholder="Email Address" required>
-                <input type="tel" placeholder="Phone Number" required>
-                <input type="password" placeholder="Password" required>
-                <input type="password" placeholder="Confirm Password" required>
-                <button type="submit">Register</button>
+            <form id="registerForm">
+                <input type="text" id="regName" placeholder="Full Name" required>
+                <input type="email" id="regEmail" placeholder="Email Address" required>
+                <input type="tel" id="regPhone" placeholder="Phone Number" required>
+                <input type="password" id="regPassword" placeholder="Password (min 6 characters)" required>
+                <input type="password" id="regConfirm" placeholder="Confirm Password" required>
+                <button type="submit" id="registerBtn">Register</button>
             </form>
             <p>Already have an account? <a href="login.html">Login</a></p>
+            <div id="registerError"></div>
         </div>
     </div>
 </div>
 
+<script src="js/main.js"></script>
+<script src="js/register.js"></script>
 </body>
 </html>

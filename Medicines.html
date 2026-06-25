@@ -4,31 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MediPal | All Medicines</title>
-    <link rel="icon" href="C:\Users\King Theo\Downloads\logo.png" type="image/png">
-    <link rel="stylesheet" href="Medicines.css">
+    <link rel="icon" href="assets/images/logo.png" type="image/png">
+    <link rel="stylesheet" href="css/medicines.css">
 </head>
 <body>
 
 <nav class="navbar">
     <div class="logo">
-        <img class="medipal-logo" src="C:\Users\King Theo\Downloads\logo.png" 
-        alt="MediPal Logo"> MediPal
+        <img class="medipal-logo" src="assets/images/logo.png" alt="MediPal Logo"> MediPal
     </div>
-    <ul class="nav-links">
-        <li><a href="Home.html">Home</a></li>
-        <li><a href="Medicines.html" class="active">Medicines</a></li>
-        <!--<li><a href="About.html">About</a></li>
-        <li><a href="Contact.html">Contact</a></li>-->
-        <li><a href="Cart.html">Cart</a></li>
-        <li><a href="Checkout.html">Checkout</a></li>
-        <li><a href="Orders.html">My Orders</a></li>
-        <li><a href="Track.html">Track Order</a></li>
-        <!--<li><a href="Login.html">Login</a></li>
-        <li><a href="Register.html">Register</a></li>-->
+    <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="medicines.html" class="active">Medicines</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="cart.html">Cart</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="register.html">Register</a></li>
     </ul>
     <div class="cart-icon">
-        <img src="C:\Users\King Theo\Downloads\cart.png" alt="Cart">
-        <span class="cart-count">0</span>
+        <img src="assets/images/cart.png" alt="Cart">
+        <span class="cart-count" id="cartCount">0</span>
     </div>
 </nav>
 
@@ -40,7 +36,7 @@
 <section class="filters">
     <div class="filter-container">
         <div class="search-box">
-            <input type="text" id="searchInput" placeholder="Search medicines...eg: paracetamol">
+            <input type="text" id="searchInput" placeholder="Search medicines... e.g. paracetamol">
             <button id="searchBtn">Search</button>
         </div>
         <div class="category-filters">
@@ -50,22 +46,21 @@
             <button class="filter-btn" data-category="Antibiotics">Antibiotics</button>
             <button class="filter-btn" data-category="Herbal">Herbal</button>
             <button class="filter-btn" data-category="Antimalarial">Antimalarial</button>
+            <button class="filter-btn" data-category="Digestive">Digestive</button>
         </div>
     </div>
 </section>
 
 <section class="medicines-list">
     <div class="medicine-grid" id="medicinesGrid"></div>
-    <div id="noResults" class="no-results">
-        <p>No medicines found</p>
-    </div>
+    <div id="noResults" class="no-results"><p>No medicines found</p></div>
 </section>
 
 <footer class="footer">
     <p>&copy; 2026 MediPal Online Pharmacy System</p>
 </footer>
 
-<script src="Main.js"></script>
-<script src="Medicine.js"></script>
+<script src="js/main.js"></script>
+<script src="js/medicines.js"></script>
 </body>
 </html>

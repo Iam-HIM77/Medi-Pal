@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+* { margin:0; padding:0; box-sizing:border-box; font-family:'Poppins',sans-serif; }
+body { background:#F5F5F5; color:#2C3E50; }
+
+.navbar {
+    display:flex; justify-content:space-between; align-items:center;
+    padding:15px 8%; background:white; box-shadow:0 2px 10px #D3D3D3;
+    position:fixed; top:0; width:100%; z-index:1000;
+}
+.medipal-logo { width:30px; height:30px; margin-right:8px; vertical-align:middle; }
+.logo { font-size:24px; font-weight:600; color:#4CAF50; display:flex; align-items:center; }
+.nav-links { display:flex; list-style:none; gap:25px; }
+.nav-links a { text-decoration:none; color:#2C3E50; font-weight:500; transition:0.3s; }
+.nav-links a:hover { color:#4CAF50; }
+.cart-icon { position:relative; cursor:pointer; }
+.cart-icon img { width:30px; height:30px; }
+.cart-count { position:absolute; top:-8px; right:-10px; background:#F44336; color:white; border-radius:50%; padding:2px 6px; font-size:11px; font-weight:bold; }
+
+.track-section { padding:100px 8% 60px; }
+.track-container { max-width:800px; margin:0 auto; }
+.track-container h1 { text-align:center; margin-bottom:30px; }
+.track-search { display:flex; gap:10px; margin-bottom:40px; }
+.track-search input { flex:1; padding:14px; border:1px solid #D3D3D3; border-radius:8px; font-size:16px; }
+.track-search button { padding:14px 30px; background:#4CAF50; color:white; border:none; border-radius:8px; cursor:pointer; font-weight:600; }
+.track-search button:hover { background:#2E7D32; }
+.track-result { display:none; background:white; border-radius:12px; padding:30px; box-shadow:0 2px 8px #D3D3D3; }
+.order-info { margin-bottom:30px; padding-bottom:20px; border-bottom:1px solid #F0F0F0; }
+.order-info p { margin:8px 0; }
+.order-info strong { color:#2C3E50; }
+
+.tracking-steps { display:flex; justify-content:space-between; position:relative; margin:30px 0; }
+.tracking-steps::before { content:''; position:absolute; top:25px; left:0; right:0; height:3px; background:#F0F0F0; z-index:1; }
+.step { text-align:center; position:relative; z-index:2; flex:1; }
+.step-icon { width:50px; height:50px; background:#F0F0F0; border-radius:50%; display:flex; align-items:center; justify-content:center; margin:0 auto 10px; font-weight:bold; color:#7F8C8D; }
+.step.completed .step-icon { background:#4CAF50; color:white; }
+.step.active .step-icon { background:#2196F3; color:white; box-shadow:0 0 0 5px rgba(33,150,243,0.2); }
+.step-label { font-size:12px; color:#7F8C8D; }
+.step.completed .step-label, .step.active .step-label { color:#2C3E50; font-weight:500; }
+.error-message { text-align:center; padding:40px; color:#F44336; }
+
+.footer { text-align:center; padding:25px; background:#2C3E50; color:white; margin-top:40px; }
+
+@media (max-width:768px) {
+    .navbar { flex-direction:column; gap:10px; }
+    .nav-links { flex-wrap:wrap; justify-content:center; }
+    .track-search { flex-direction:column; }
+    .tracking-steps { flex-direction:column; gap:20px; }
+    .tracking-steps::before { display:none; }
+    .step { display:flex; align-items:center; gap:15px; text-align:left; }
+    .step-icon { margin:0; }
+}

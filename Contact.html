@@ -4,26 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MediPal | Contact Us</title>
-    <link rel="stylesheet" href="Contact.css">
-    <link rel="icon" href="C:\Users\King Theo\Downloads\logo.png" type="image/png">
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="icon" href="assets/images/logo.png" type="image/png">
 </head>
 <body>
 
 <nav class="navbar">
     <div class="logo">
-        <img class="medipal-logo" src="C:\Users\King Theo\Downloads\logo.png" 
-        alt="MediPal Logo">MediPal
+        <img class="medipal-logo" src="assets/images/logo.png" alt="MediPal Logo">MediPal
     </div>
-    <ul class="nav-links">
-        <li><a href="Home.html">Home</a></li>
-        <li><a href="Medicines.html">Medicines</a></li>
-        <li><a href="About.html">About</a></li>
-        <li><a href="Contact.html" class="active">Contact</a></li>
-        <!--<li><a href="Login.html">Login</a></li>
-        <li><a href="Register.html">Register</a></li>-->
-    </ul>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="medicines.html">Medicines</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html" class="active">Contact</a></li>
+            <li><a href="cart.html">Cart</a></li>
+            <li><a href="login.html" id="loginNav">Login</a></li>
+            <li><a href="register.html" id="registerNav">Register</a></li>
+        </ul>
     <div class="cart-icon">
-        <img src="C:\Users\King Theo\Downloads\cart.png" alt="Cart">
+        <img src="assets/images/cart.png" alt="Cart">
         <span class="cart-count">0</span>
     </div>
 </nav>
@@ -36,39 +36,18 @@
 <section class="contact-section">
     <div class="contact-container">
         <div class="contact-info">
-            <div class="info-card">
-                <span>📍</span>
-                <h3>Visit Us</h3>
-                <p>KTU</p>
-                <p>Koforidua, Ghana</p>
-            </div>
-            <div class="info-card">
-                <span>📞</span>
-                <h3>Call Us</h3>
-                <p>+233 X XXX XXX</p>
-                <p>+233 X XXX XXX</p>
-            </div>
-            <div class="info-card">
-                <span>✉️</span>
-                <h3>Email Us</h3>
-                <p>support@medipal.com</p>
-                <p>info@medipal.com</p>
-            </div>
-            <div class="info-card">
-                <span>⏰</span>
-                <h3>Working Hours</h3>
-                <p>Monday - Friday: 8am - 8pm</p>
-                <p>Saturday: 9am - 5pm</p>
-            </div>
+            <div class="info-card"><span>📍</span><h3>Visit Us</h3><p>KTU</p><p>Koforidua, Ghana</p></div>
+            <div class="info-card"><span>📞</span><h3>Call Us</h3><p>+233 X XXX XXX</p><p>+233 X XXX XXX</p></div>
+            <div class="info-card"><span>✉️</span><h3>Email Us</h3><p>support@medipal.com</p><p>info@medipal.com</p></div>
+            <div class="info-card"><span>⏰</span><h3>Working Hours</h3><p>Monday - Friday: 8am - 8pm</p><p>Saturday: 9am - 5pm</p></div>
         </div>
-        
         <div class="contact-form">
             <h2>Send us a message</h2>
             <form id="contactForm">
-                <input type="text" placeholder="Your Name" required>
-                <input type="email" placeholder="Your Email" required>
-                <input type="text" placeholder="Subject">
-                <textarea rows="5" placeholder="Your Message"></textarea>
+                <input type="text" id="contactName" placeholder="Your Name" required>
+                <input type="email" id="contactEmail" placeholder="Your Email" required>
+                <input type="text" id="contactSubject" placeholder="Subject">
+                <textarea id="contactMessage" rows="5" placeholder="Your Message" required></textarea>
                 <button type="submit">Send Message</button>
             </form>
         </div>
@@ -78,6 +57,7 @@
 <footer class="footer">
     <p>&copy; 2026 MediPal Online Pharmacy System</p>
 </footer>
-
+<script src="js/main.js"></script>
+<script src="js/contact.js"></script>
 </body>
 </html>

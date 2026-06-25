@@ -4,26 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MediPal | Track Order</title>
-    <link rel="stylesheet" href="Track.css">
-    <link rel="icon" href="C:\Users\King Theo\Downloads\logo.png" type="image/png">
+    <link rel="stylesheet" href="css/track.css">
+    <link rel="icon" href="assets/images/logo.png" type="image/png">
 </head>
 <body>
 
 <nav class="navbar">
     <div class="logo">
-        <img class="medipal-logo" src="C:\Users\King Theo\Downloads\logo.png"
-         alt="MediPal Logo">MediPal
+        <img class="medipal-logo" src="assets/images/logo.png" alt="MediPal Logo">MediPal
     </div>
-    <ul class="nav-links">
-        <li><a href="Home.html">Home</a></li>
-        <li><a href="Medicines.html">Medicines</a></li>
-        <li><a href="About.html">About</a></li>
-        <li><a href="Contact.html">Contact</a></li>
-       <!-- <li><a href="Login.html">Login</a></li>
-        <li><a href="Register.html">Register</a></li>-->
-    </ul>
+      <ul class="nav-links" id="navLinks">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="medicines.html">Medicines</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="cart.html">Cart</a></li>
+            <li><a href="login.html" id="loginNav">Login</a></li>
+            <li><a href="register.html" id="registerNav">Register</a></li>
+        </ul>
     <div class="cart-icon">
-        <img src="C:\Users\King Theo\Downloads\cart.png" alt="Cart">
+        <img src="assets/images/cart.png" alt="Cart">
         <span class="cart-count" id="cartCount">0</span>
     </div>
 </nav>
@@ -31,12 +31,10 @@
 <section class="track-section">
     <div class="track-container">
         <h1>Track Your Order</h1>
-        
         <div class="track-search">
             <input type="text" id="orderId" placeholder="Enter Order ID">
             <button id="trackBtn">Track Order</button>
         </div>
-        
         <div id="trackResult" class="track-result"></div>
     </div>
 </section>
@@ -45,7 +43,7 @@
     <p>&copy; 2026 MediPal Online Pharmacy System</p>
 </footer>
 
-<script src="Main.js"></script>
-<script src="Track.js"></script>
+<script src="js/main.js"></script>
+<script src="js/track.js"></script>
 </body>
 </html>
